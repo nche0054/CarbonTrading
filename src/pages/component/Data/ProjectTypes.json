@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "type": "Renewable Energy"
+    },
+    {
+        "id": 2,
+        "type": "Forestry and Land Use"
+    },
+    {
+        "id": 3,
+        "type": "Energy Efficiency"
+    },
+    {
+        "id": 4,
+        "type": "Blue Carbon"
+    },
+    {
+        "id": 5,
+        "type": "Waste Management"
+    },
+    {
+        "id": 6,
+        "type": "Agricultural Land Management"
+    },
+    {
+        "id": 7,
+        "type": "Transportation"
+    }
+]

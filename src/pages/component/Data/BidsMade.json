@@ -1,0 +1,12 @@
+{
+  "bids": [
+    {
+      "id": "233d",
+      "ProjectName": "",
+      "projectType": "Renewable Energy",
+      "bidType": "Bidding",
+      "CarbonCredits": 17600,
+      "unitPrice": 3.9
+    }
+  ]
+}
