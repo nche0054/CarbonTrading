@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 
 export default function Slider({ label, min, max, step, unit, posRight, decimal, value, setValue}) {
-  let defaultValue;
+  let defaultValue, minValue, maxValue;
   if (decimal) {
-    defaultValue = value.toFixed(2);
+    defaultValue = parseFloat(value).toFixed(2);
+    minValue = parseFloat(min).toFixed(2);
+    maxValue = parseFloat(max).toFixed(2);
   } else {
     defaultValue = value;
+    minValue = min;
+    maxValue = max;
   }
 
   // const [value, setValue] = useState(defaultValue);
@@ -33,22 +37,26 @@ export default function Slider({ label, min, max, step, unit, posRight, decimal,
     let newVal;
     if (decimal) {
       newVal = newValue.toFixed(2);
+      setInputValue(newVal);
+      newVal = parseFloat(newVal);
     }
     else {
       newVal = newValue.toFixed(0);
+      setInputValue(newVal);
+      newVal = parseInt(newVal);
     }
 
     if (newValue >= min && newValue <= max) {
       setValue(newVal);
-      setInputValue(newVal);
+      // setInputValue(newVal);
     }
     else if (newValue < min) {
-      setValue(min);
-      setInputValue(min);
+      setValue(minValue);
+      setInputValue(minValue);
     }
     else if (newValue > max) {
-      setValue(max);
-      setInputValue(max);
+      setValue(maxValue);
+      setInputValue(maxValue);
     }
   };
   
