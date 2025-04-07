@@ -1,0 +1,9 @@
+import { WeeklyBiddingStats } from './WeeklyChartData.js';
+import {updateChartData} from './WeeklyChartData.js';
+
+// Example: Adding data for "31/12"
+const newLabel = "31/12";
+const newData = [3.4, 1.9, 3.2, 2.1]; // Replace with actual values
+
+updateChartData(WeeklyBiddingStats, newLabel, newData);
+console.log("Updated Weekly Bidding Stats:", WeeklyBiddingStats);

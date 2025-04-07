@@ -4,6 +4,7 @@ import ProjectTypeDropdown from "./Dropdowns";
 import Slider from "./SliderBar";
 import BidsMadeCard from "./BidsMadeCard";
 import {useNavigate} from 'react-router-dom';
+import CountdownTimer from "./CountdownTimer";
 
 const NewBidCard = () => {
   const [NewBid, SetNewBid] = useState(1);
@@ -61,7 +62,7 @@ const NewBidCard = () => {
             <button className="w-60 text-lg bg-gray-100 py-3 text-gray-900 hover:text-blue-800 font-semibold rounded-lg shadow hover:bg-gray-200" onClick={()=> buyingButton()}>Buying</button> 
           </div>
         </div>
-        <p className="text-gray-700 text-base/4 font-medium my-4 ml-8">Time left until market closing: 18 hours 38 minutes</p>
+        <CountdownTimer/>
         <div className= "overflow-y-auto items-start mx-6 rounded-xl px-4 py-2 bg-white w-550 h-36 shadow-xl ring-1 ring-slate-900/5">
           <h4 className="ml-3 mt-1 text-[17px] font-semibold">Bids made today</h4>
           <hr className="h-px px-2 my-1 bg-gray-200 border-0 dark:bg-gray-700"></hr>
@@ -87,19 +88,6 @@ const NewBidCard = () => {
                     onChange={(e)=> SetProjectName(e.target.value)}
                   />
               <p className="text-gray-700 text-sm font-normal mt-3 mb-2">Project Type:</p>
-              {/* <select
-                value = {ProjectType}
-                onChange={(e)=> SetProjectType(e.target.value)}
-                className = "bg-[#FDFDFD] w-[465px] hover:bg-gray-100 text-gray-800 border-1 border-gray-500 font-normal py-2 px-4 rounded-lg inline-flex items-center justify-between"
-              >
-                <option value="Renewable Energy">Renewable Energy</option>
-                <option value="Forestry and Land Use">Forestry and Land Use</option>
-                <option value="Energy Efficiency">Energy Efficiency</option>
-                <option value="Blue Carbon">Blue Carbon</option>
-                <option value="Waste Management">Waste Management</option>
-                <option value="Agricultural Land Management">Agricultural Land Management</option>
-                <option value="Transportation">Transportation</option>
-              </select> */}
               <ProjectTypeDropdown
                 selectedOption = {projectType}
                 setSelectedOption = {setProjectType}/>
@@ -115,7 +103,11 @@ const NewBidCard = () => {
                 value = {CarbonCredits}
                 setValue = {SetCarbonCredits}
               />
-              <p className="text-gray-700 text-sm font-normal mt-3 mb-2">Unit Price:</p>
+              <div className="flex flex-row justify-between items-center w-full">
+                <p className="text-gray-700 text-sm font-normal mt-3 mb-2">Unit Price:</p>
+                <p className="text-blue-800 text-sm font-semibold underline mt-3 mb-2">Total: RM{unitPrice*CarbonCredits}</p>
+              </div>
+              
               <Slider 
                 label="Price"
                 min={0.10}
@@ -132,8 +124,8 @@ const NewBidCard = () => {
             </div>
           </form>
         </div>
-        <p className="text-gray-700 text-base/4 font-medium my-4 ml-10">Time left until market closing: 5 hours 14 minutes</p>
-      </div>
+        <CountdownTimer/>
+      </div>  
     );
   }
   else if (NewBid === 3) {
@@ -177,7 +169,7 @@ const NewBidCard = () => {
             </div>
           </form>
         </div>
-        <p className="text-gray-700 text-base/4 font-medium my-4 ml-10">Time left until market closing: 4 hours 10 minutes</p>
+        <CountdownTimer/>
       </div>
     )
   }

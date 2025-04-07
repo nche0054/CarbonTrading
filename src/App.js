@@ -1,9 +1,11 @@
 import React from 'react';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import TradingPage from './pages/component/Dashboard/TradingPage';
-import Dashboard from './pages/component/Dashboard/Dashboard';
-import EditBid from './pages/component/Dashboard/EditBid';
-import ErrorPage from './pages/Error/ErrorPage';
+import TradingPage from './pages/component/Trading/TradingPage.jsx';
+import Dashboard from './pages/component/Dashboard/Dashboard.jsx';
+import PortfolioPage from './pages/component/Portfolio/PortfolioPage.jsx';
+import EditBid from './pages/component/Trading/EditBid.jsx';
+import ErrorPage from './pages/Error/ErrorPage.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -11,9 +13,14 @@ const router = createBrowserRouter([
     element: <TradingPage />,
     errorElement: <ErrorPage />
   },
+  // {
+  //   path: '/dashboard',
+  //   element: <Dashboard />,
+  //   errorElement: <ErrorPage />,
+  // },
   {
-    path: '/dashboard',
-    element: <Dashboard />,
+    path: '/portfolio',
+    element: <PortfolioPage />,
     errorElement: <ErrorPage />,
   },
   {

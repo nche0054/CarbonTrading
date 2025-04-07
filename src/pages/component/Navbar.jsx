@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CompanyLogo } from "../../../visuals";
+import { CompanyLogo } from "../../visuals";
 import {FaUser, FaSearch} from 'react-icons/fa';
 
 const Navbar = () => {
@@ -42,19 +42,25 @@ const Navbar = () => {
         {/* Dashboard, Portfolio, Emission, Analytics, Trading
         */}
 
-          <NavLink
+          {/* <NavLink
             to = "/dashboard"
             className="text-black hover:text-blue-500 transition duration-300"
             activeClassName="text-blue-500"
           >
             Dashboard
-          </NavLink>
+          </NavLink> */}
           <a
-            href="#portfolio"
+            href="#dashboard"
+            className="text-black hover:text-blue-500 transition duration-300"
+          >
+            Dashboard
+          </a>
+          <NavLink
+            to="/portfolio"
             className="text-black hover:text-blue-500 transition duration-300"
           >
             Portfolio
-          </a>
+          </NavLink>
           <a
             href="#emission"
             className="text-black hover:text-blue-500 transition duration-300"
@@ -70,6 +76,7 @@ const Navbar = () => {
           <NavLink 
             to="/trading"
             className="text-black hover:text-blue-500 transition duration-300"
+            activeClassName="text-blue-500"
           >
             Trading
           </NavLink>

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './App.js';
 import './index.css';
-import { AuthProvider } from './contexts/AuthProvider';
+import { AuthProvider } from './contexts/AuthProvider.js';
 import { disableReactDevTools } from '@fvilers/disable-react-devtools';
-import PersistLogin from './pages/Auth/component/Auth/PersistLogin';
+import PersistLogin from './pages/Auth/component/Auth/PersistLogin.js';
 
 disableReactDevTools();
 

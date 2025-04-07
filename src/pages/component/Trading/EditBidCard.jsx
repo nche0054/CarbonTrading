@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import {Link, useNavigate } from 'react-router-dom';
 import Slider from "./SliderBar";
 import ProjectTypeDropdown from "./Dropdowns";
+import CountdownTimer from "./CountdownTimer";
 
 const EditBidCard = ({bid}) => {
     const [ProjectName, SetProjectName] = useState(bid.ProjectName);
@@ -83,7 +84,8 @@ const EditBidCard = ({bid}) => {
                     </div>
                 </form>
                 </div>
-                <p className="text-gray-700 text-base/4 font-medium my-4 ml-10">Time left until market closing: 5 hours 14 minutes</p>
+                <CountdownTimer/>
+                {/* <p className="text-gray-700 text-base/4 font-medium my-4 ml-10">Time left until market closing: 5 hours 14 minutes</p> */}
             </div>
     );
     }
@@ -127,7 +129,7 @@ const EditBidCard = ({bid}) => {
                   </div>
                 </form>
               </div>
-              <p className="text-gray-700 text-base/4 font-medium my-4 ml-10">Time left until market closing: 4 hours 10 minutes</p>
+              <CountdownTimer/>
             </div>
         )
     }

@@ -3,7 +3,7 @@ const XLSX = require('xlsx');
 const path = require('path'); // Import path module
 
 // Read Excel File
-const workbook = XLSX.readFile("C:/Users/ASUS/OneDrive - Monash University/FYP A/MyEthereumProject/PoSo/Output/TransactionData_V2.xlsx");
+const workbook = XLSX.readFile("C:/Users/ASUS/OneDrive - Monash University/FYP/MyEthereumProject/PoSo/Output/TransactionData_V2.xlsx");
 const sheetName = workbook.SheetNames[0];
 const sheet = workbook.Sheets[sheetName];
 

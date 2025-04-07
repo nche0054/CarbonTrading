@@ -1,5 +1,5 @@
 import axios from 'axios';
-import useAuth from '../hooks/hooks/useAuth';
+import useAuth from '../hooks/hooks/useAuth.js';
 
 const baseURL = 'http://localhost:3500/api/v1';
 // const baseURL = '/api/v1';       // For Server

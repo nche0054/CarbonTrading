@@ -1,12 +1,12 @@
 {
   "bids": [
     {
-      "id": "233d",
-      "ProjectName": "",
-      "projectType": "Renewable Energy",
-      "bidType": "Bidding",
-      "CarbonCredits": 17600,
-      "unitPrice": 3.9
+      "id": "e9e7",
+      "ProjectName": "Project EnergyZ",
+      "projectType": "Energy Efficiency",
+      "bidType": "Selling",
+      "CarbonCredits": 9900,
+      "unitPrice": 1.9
     }
   ]
 }
