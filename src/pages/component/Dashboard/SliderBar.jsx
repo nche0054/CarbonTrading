@@ -8,8 +8,8 @@ export default function Slider({ label, min, max, step, unit, posRight, decimal,
     maxValue = parseFloat(max).toFixed(2);
   } else {
     defaultValue = value;
-    minValue = min;
-    maxValue = max;
+    minValue = parseInt(min);
+    maxValue = parseInt(max);
   }
 
   // const [value, setValue] = useState(defaultValue);
